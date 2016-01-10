@@ -1,0 +1,144 @@
+SEQUENCE (String, List, Tuple)
+------------------------------------------
+indexing: 				x[6]
+slicing: 				x[first:last+1:step]
+	slicing does not change x; it returns a new list of the sliced items.
+	x='computer'
+	x[1:4]				omp
+	x[1:6:2]			opt
+	x[3:]				puter
+	x[:5]				compu
+	x[-1]				r
+	x[-3:]				ter
+	x[:-2]				comput
+adding/concatenating: 	+
+multiplying: 			*
+checking membership: 	in/not in. also works to check for substrings
+	if value in x:
+	if "dog" not in x:  
+iterating:			
+	for i in x:						 	# iterate items
+	for i in range(0,len(x))			# iterate index
+	for index, item in enumerate(x):	# iterate index & items
+len(x)
+min(x)
+max(x)
+sum(x)		  			# sum, if all numeric values
+sum(x[1:3]])			# sum of items with indexes 1 and 2
+sorted(x)				# does not change x. returns new sorted list
+x.count(item)   		# frequency of a value or item
+x.index(item)   		# returns index of first instance of item
+
+LIST
+------------------------------------------
+a = list()				# new empty list
+a = [1, 2, 3]			# new list with 3 integers
+a = list(tuple1)		# new list from tuple
+a = [x*2 for x in range(1, 11)]		# new list with even ints 2-20
+a.append(obj)			# add to end of list
+a.insert(item, index)	# insert item at index
+a.extend(listb)			# append listb to a
+del(a[i])				# remove item at index i
+item = a.pop()			# pop last item
+item = a.pop(index)		# pop item at index
+a.sort()				# in-place sort
+a.reverse()				# reverses the order of the list
+i = a.index(value)		# get index of first match
+n = a.count(value)		# frequency of a value
+str = "".join(a)		# joins list items into a string
+len, min, max, sum, count, index	# see SEQUENCE
+for loop				# see iterating a SEQUENCE
+check membership		# see checking membership in a SEQUENCE
+
+TUPLE
+------------------------------------------
+items are immutable (except lists within a tuple). cannot add or delete items.
+t = ()					# new empty tuple
+t = tuple(list1)		# new tuple from list
+t = (1, 5, 'bat')		# new tuple with 3 items
+t = (22, )				# new single-item tuple
+a = t[2:4]				# new list x with items 2 and 3
+t = t1 + t2				# concatenate two tuples
+len, min, max, sum, count, index	# see SEQUENCE
+for loop				# see iterating a SEQUENCE
+check membership		# see checking membership in a SEQUENCE
+
+SET
+------------------------------------------
+not sortable. not indexable. no duplicate items allowed.
+s = set()				# empty set
+s = {3,5,3,5}			# {5, 3}  strips duplicates
+s = set(list1)			# new set from list1, strips duplicates
+len(s)
+if item in s:			# test membership
+s.add(item)
+s.remove(item)
+s.pop()					# pop random item from s
+s.clear()				# delete all items
+s1 & s2					# AND/INTERSECT of 2 sets
+s1 | s2					# OR/UNION of 2 sets
+s1 ^ s2					# XOR of 2 sets
+
+DICTIONARY
+------------------------------------------
+key-value pairs. random order. not sortable. no duplicate keys.
+3 ways to make a new dictionary:
+	d = {'A':5, 'B':8, 'C':4}
+	d = dict([('A', 5),('B', 8),('C', 4)])
+	d = dict(A=5, B=8, C=4)
+d['B'] = 6				# add or change item B
+del d['B']				# delete item B
+len(d)
+if item in d:			# check membership in keys
+if item in d.values:	# check membership in values
+d.clear()				# delete all items
+d.keys()				# returns new list of keys
+d.values()				# returns new list of values
+d.items()				# returns list of key-value tuple pairs in d
+Iterating a dictionary:
+	for key in d:
+	for key,value in d.items()
+
+QUEUE
+------------------------------------------
+implement using a list.
+practical for small queue only. pop will be slow for large queues.
+q = list()
+q.append(obj)			# push to end of queue
+q.pop(0)				# pop from front of queue
+
+STACK
+------------------------------------------
+implement using a list. append adds to end of list. pop removes from end of list.
+s = list()
+s.append(obj)			# push to top of stack
+obj = s.pop()			# pop from top of stack
+
+INHERITANCE
+------------------------------------------
+class Polygon:
+	def __init__(self, id):
+		self.id = id
+class Rectangle(Polygon):
+	def __init__(self, id, width, height):
+		super().__init__(id)
+		self.shape = (width, height)
+
+STRING OPERATIONS
+------------------------------------------
+len, min, max, sum, count, index	# see SEQUENCE
+substrings				# see slicing a SEQUENCE
+for loop				# see iterating a SEQUENCE
+check membership		# see checking membership in a SEQUENCE
+
+FILE OPERATIONS
+------------------------------------------
+with open("inputFile.txt") as f1:
+	for line in f1:							# iterate file, line is a string
+with open("outputFile.txt", 'a') as f2:		# open in append mode
+	f2.write("my data" + "\n")
+
+ITERATOR
+------------------------------------------
+i = iter(myList)
+item = i.next()
