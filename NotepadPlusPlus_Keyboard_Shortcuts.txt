@@ -1,0 +1,36 @@
+FILE
+	CTRL-N	New document
+	CTRL-O	Open document
+	CTRL-S	Save document
+	CTRL-SHIFT-S	Save all documents
+	CTRL-W	Close document
+	CTRL-PgUp	Previous document
+	CTRL-PgDown	Next document
+	CTRL-Tab	Next doc, show list of open docs
+EDIT
+	CTRL-F	Find / replace
+	F3		Find next
+	CTRL-U	Convert to lower case
+	CTRL-Shift-U	Convert to upper case
+	CTRL-Q	Comment/uncomment selected lines
+	CTRL-B	Go to matching brace/bracket/parens
+	CTRL-F2	Set/remove bookmark
+	F2		Go to next bookmark
+VIEW
+	CTRL +	Zoom in / larger font
+	CTRL -	Zoom out / smaller font
+	ALT-F2	Open in Google
+	ALT-F3	Open in Wikipedia
+	CTRL-ALT-Shift-X	Open in Firefox
+EDIT
+	CTRL-A	Select all
+	CTRL-C	Copy
+	CTRL-X	Cut
+	CTRL-V	Paste
+	CTRL-Z	Undo
+	CTRL-Y	Redo
+	ALT-LeftClick	Column-mode select
+	CTRL-D	Duplicate current line
+	CTRL-T	Swap current line with previous line
+	CTRL-L	Delete current line
+	CTRL-Shift-Down	Move current line down
